@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết phòng</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="subject">CHI TIẾT PHÒNG</h1>
+    <div class="container flex">
+        <div>
+            <img src="{{ url_for('static', filename=room.image) }}" width="600" border="1px" alt="{{ room.name }}"/>
+        </div>
+        <div>
+            <h2>{{ room.name }}</h2>
+            <p>{{ room.description }}</p>
+            <h4>{{ "{:,.1f}".format(room.price) }} VND</h4>
+        </div>
+    </div>
+</body>
+</html>
